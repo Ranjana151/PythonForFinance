@@ -27,12 +27,23 @@ for ticker in crypto:
         combined = combined.join(data[metric])
         colNames.append(ticker)
         combined.columns = colNames
+ax = plt.axes()
 
-"""plt.yscale('log')
 for ticker in crypto:
-    plt.plot(combined[ticker], label=ticker)
-
-plt.legend(loc="upper right")"""
+    ax.plot(combined[ticker], label=ticker)
+ax.legend(loc="upper center")
 combined = combined.pct_change().corr(method="pearson")
-sns.heatmap(combined, cmap="coolwarm", annot=True)
+ax.set_facecolor('black')
+ax.figure.set_facecolor('#121212')
+ax.set_title('CRYPTOCURRENCIES SHARE ANALYSIS', color="blue", fontsize=25)
+ax.tick_params(axis='x', colors='#FFFFFF')
+ax.tick_params(axis='y', colors='#FFFFFF')
 plt.show()
+
+
+"""sns.heatmap(combined, cmap="coolwarm", cbar=False, annot=True, ax=ax, cbar_kws={'label': 'Color range 0 to 1'})
+ax.set_title('CRYPTOCURRENCIES SHARE ANALYSIS', color="blue", fontsize=25)
+ax.figure.set_facecolor('#121212')
+ax.tick_params(axis='x', colors='#FFFFFF')
+ax.tick_params(axis='y', colors='#FFFFFF')
+plt.show()"""

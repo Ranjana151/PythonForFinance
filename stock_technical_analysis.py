@@ -54,5 +54,6 @@ ax1.grid(False)
 ax1.set_axisbelow(True)
 ax1.tick_params(axis='x', colors='white')
 ax1.tick_params(axis='y', colors='white')
+ax.set_title('FB STOCK TECHNICAL ANALYSIS ', color="blue", fontsize=25)
 
 plt.show()
