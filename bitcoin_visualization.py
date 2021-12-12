@@ -31,7 +31,7 @@ ax.tick_params(axis='y', colors='#FFFFFF')
 plt.xlabel('Dates', color="blue", fontsize=25)
 plt.ylabel('Prices(Millions)', color="blue", fontsize=25)
 
-candlestick_ochl(ax, data.values, width=0.5, colorup="#00FF00")
+candlestick_ochl(ax, data.values, width=0.6, colorup="#00FF00")
 
 ax.xaxis_date()
 plt.show()

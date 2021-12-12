@@ -24,8 +24,8 @@ asset_data = [asset_q1, asset_q2, asset_q3, asset_q4]
 asset_data = [x / 1000000000 for x in asset_data]
 plt.style.use('dark_background')
 plt.bar([1, 2, 3, 4], asset_data, color='green')
-plt.title(f"Quarterly total Assets of {company}")
-plt.xlabel("Quarters")
-plt.ylabel("Total Assets in (billions USD)")
+plt.title(f"{company} Quarterly Total Assets ", color="yellow", fontsize=45)
+plt.xlabel("Quarters", color="blue", fontsize=25)
+plt.ylabel("Total Assets in (billions USD)", color="blue", fontsize=25)
 plt.xticks([1, 2, 3, 4], ['Q1', 'Q2', 'Q3', 'Q4'])
 plt.show()

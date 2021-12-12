@@ -1,7 +1,8 @@
 import pandas_datareader as web
 import datetime as dt
 import matplotlib.pyplot as plt
-import seaborn as sns
+
+# import seaborn as sns
 
 currency = "USD"
 
@@ -18,6 +19,7 @@ for ticker in crypto:
 
     if first:
         combined = data[[metric]].copy()
+
         colNames.append(ticker)
         combined.columns = colNames
         first = False
@@ -38,8 +40,9 @@ ax.figure.set_facecolor('#121212')
 ax.set_title('CRYPTOCURRENCIES SHARE ANALYSIS', color="blue", fontsize=25)
 ax.tick_params(axis='x', colors='#FFFFFF')
 ax.tick_params(axis='y', colors='#FFFFFF')
+plt.xlabel('Dates', color="blue", fontsize=25)
+plt.ylabel('Price( In Millions)', color="blue", fontsize=25)
 plt.show()
-
 
 """sns.heatmap(combined, cmap="coolwarm", cbar=False, annot=True, ax=ax, cbar_kws={'label': 'Color range 0 to 1'})
 ax.set_title('CRYPTOCURRENCIES SHARE ANALYSIS', color="blue", fontsize=25)
